@@ -1,0 +1,473 @@
+/* Original gallery concepts. Images are illustrative, not completed-project evidence. */
+(() => {
+  const seed=window.EPOXY_SEED;
+  const additions=[
+  {
+    "id": "concept-celestial-1",
+    "name": "Midnight Constellation",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-1.jpg",
+    "systemId": "river",
+    "description": "Black resin dining table with fine gold constellation inlays and tiny star fragments in penthouse. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-celestial-2",
+    "name": "Golden Orbit",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-2.jpg",
+    "systemId": "river",
+    "description": "Golden amber resin coffee table embedding subtle celestial metal moon and stars in warm lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-celestial-3",
+    "name": "Ruby Nebula",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-3.jpg",
+    "systemId": "river",
+    "description": "Ruby dark resin oval dining table with delicate brass star map pattern in art deco room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-celestial-4",
+    "name": "Emerald Cosmos",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-4.jpg",
+    "systemId": "river",
+    "description": "Emerald resin sideboard top with gold crescent moon and tiny stars in green library. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-celestial-5",
+    "name": "Sapphire Starfield",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-5.jpg",
+    "systemId": "river",
+    "description": "Sapphire midnight resin dining table with scattered silver stars and nebula-like pigment in modern loft. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-celestial-6",
+    "name": "Pearl Starlight",
+    "category": "Star/celestial resin tables",
+    "image": "assets/gallery/celestial-6.jpg",
+    "systemId": "river",
+    "description": "Pearl resin circular coffee table with subtle silver lunar motif and stars in white salon. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Star/celestial resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-1",
+    "name": "Ivory Rose Noir",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-1.jpg",
+    "systemId": "river",
+    "description": "Clear black tinted resin dining table embedding ivory roses and gold botanical leaves in townhouse. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-2",
+    "name": "Pressed Garden",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-2.jpg",
+    "systemId": "river",
+    "description": "Honey gold transparent resin console with preserved dried meadow flowers in sunlit hall. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-3",
+    "name": "Ruby Rose Table",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-3.jpg",
+    "systemId": "river",
+    "description": "Clear resin round table embedding ruby red roses in elegant cream salon. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-4",
+    "name": "Emerald Botanical",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-4.jpg",
+    "systemId": "river",
+    "description": "Transparent resin dining table with preserved fern fronds and tiny white flowers in garden room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-5",
+    "name": "Blue Blossom",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-5.jpg",
+    "systemId": "river",
+    "description": "Clear resin coffee table with blue delphinium petals arranged between walnut edges in coastal lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-floral-6",
+    "name": "Pearl Petal",
+    "category": "Preserved floral resin tables",
+    "image": "assets/gallery/floral-6.jpg",
+    "systemId": "river",
+    "description": "Pearl clear resin dining table with white daisies and pale dried hydrangeas in bright apartment. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Preserved floral resin tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-1",
+    "name": "Noir Gold Kitchen Island",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-1.jpg",
+    "systemId": "counter",
+    "description": "Black and gold resin kitchen island countertop with fluid bronze veins in walnut kitchen. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-2",
+    "name": "Honey Amber Console",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-2.jpg",
+    "systemId": "river",
+    "description": "Honey amber translucent resin sculptural console in cream stone entrance. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-3",
+    "name": "Ruby Blush Island",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-3.jpg",
+    "systemId": "counter",
+    "description": "Ruby and blush flowing resin kitchen island countertop in ivory contemporary kitchen. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-4",
+    "name": "Emerald Oak Desk",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-4.jpg",
+    "systemId": "river",
+    "description": "Emerald and natural oak resin waterfall desk in elegant home office. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-5",
+    "name": "Sapphire Breakfast Bar",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-5.jpg",
+    "systemId": "counter",
+    "description": "Sapphire turquoise ocean-inspired resin waterfall breakfast bar in coastal kitchen. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-furniture-6",
+    "name": "Pearl Opal Coffee Table",
+    "category": "Colourful countertops/resin furniture",
+    "image": "assets/gallery/furniture-6.jpg",
+    "systemId": "river",
+    "description": "Pearl opal pink resin sculptural coffee table in soft cream living room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Colourful countertops/resin furniture",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-1",
+    "name": "Midnight Gold Dining",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-1.jpg",
+    "systemId": "river",
+    "description": "Oval black epoxy dining table with gold microglitter, brass legs in dark oak penthouse. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-2",
+    "name": "Champagne Atelier",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-2.jpg",
+    "systemId": "river",
+    "description": "Rectangular champagne gold glitter resin dining table, bronze pedestal in bright travertine villa. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-3",
+    "name": "Ruby Spark Dining",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-3.jpg",
+    "systemId": "river",
+    "description": "Rounded ruby glitter resin dining table, black legs in warm art deco dining room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-4",
+    "name": "Emerald Conservatory",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-4.jpg",
+    "systemId": "river",
+    "description": "Emerald fine glitter resin dining table, walnut trestle in conservatory dining room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-5",
+    "name": "Sapphire Shore Dining",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-5.jpg",
+    "systemId": "river",
+    "description": "Sapphire blue glitter dining table, chrome sled legs in waterfront apartment. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-glitter-6",
+    "name": "Pearl Opal Dining",
+    "category": "Glitter dining tables",
+    "image": "assets/gallery/glitter-6.jpg",
+    "systemId": "river",
+    "description": "Pearl white opalescent glitter round dining table, ash legs in airy Scandinavian dining room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Glitter dining tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-1",
+    "name": "Golden River Light",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-1.jpg",
+    "systemId": "river",
+    "description": "Black walnut river dining table with warm gold internal LED resin channel in moody loft. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-2",
+    "name": "Amber Halo Console",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-2.jpg",
+    "systemId": "river",
+    "description": "Amber translucent resin console with soft embedded lighting in stone hallway. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-3",
+    "name": "Ruby Edge Coffee Table",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-3.jpg",
+    "systemId": "river",
+    "description": "Ruby resin coffee table with subtle illuminated perimeter in taupe lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-4",
+    "name": "Emerald River Light",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-4.jpg",
+    "systemId": "river",
+    "description": "Emerald illuminated resin river table between live oak slabs in forest lodge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-5",
+    "name": "Sapphire Glow Dining",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-5.jpg",
+    "systemId": "river",
+    "description": "Sapphire clear resin dining table with soft blue internal light in evening penthouse. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-illuminated-6",
+    "name": "Pearl Radiance",
+    "category": "Illuminated epoxy tables",
+    "image": "assets/gallery/illuminated-6.jpg",
+    "systemId": "river",
+    "description": "Pearl translucent resin oval coffee table with warm internal glow in minimalist lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Illuminated epoxy tables",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-1",
+    "name": "Obsidian Vein",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-1.jpg",
+    "systemId": "metallic",
+    "description": "Black and gold flowing metallic epoxy floor in large contemporary villa foyer. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-2",
+    "name": "Champagne Flow",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-2.jpg",
+    "systemId": "metallic",
+    "description": "Champagne bronze metallic epoxy floor with soft swirling veins in bright luxury gallery. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-3",
+    "name": "Ruby Marble",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-3.jpg",
+    "systemId": "metallic",
+    "description": "Ruby burgundy metallic epoxy floor with charcoal marbling in elegant hotel lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-4",
+    "name": "Emerald Tide",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-4.jpg",
+    "systemId": "metallic",
+    "description": "Emerald metallic epoxy floor with flowing brass highlights in upscale living room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-5",
+    "name": "Sapphire Current",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-5.jpg",
+    "systemId": "metallic",
+    "description": "Sapphire silver metallic epoxy floor with fluid marble movement in minimalist penthouse. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-metallic-6",
+    "name": "Pearl Horizon",
+    "category": "Metallic luxury flooring",
+    "image": "assets/gallery/metallic-6.jpg",
+    "systemId": "metallic",
+    "description": "Pearl white silver metallic epoxy floor with champagne subtle veining in sunlit kitchen. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "Metallic luxury flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-1",
+    "name": "Riverbed Glow",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-1.jpg",
+    "systemId": "3d",
+    "description": "Photorealistic flat epoxy floor with black river stones and warm gold sand illusion in spa reception. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-2",
+    "name": "Golden Tide",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-2.jpg",
+    "systemId": "3d",
+    "description": "Flat epoxy floor printed with golden beach sand and shallow clear tidewater illusion in modern sunroom. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-3",
+    "name": "Autumn Maple",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-3.jpg",
+    "systemId": "3d",
+    "description": "Flat glossy epoxy floor printed with autumn ruby maple leaves and river pebble illusion in luxury lounge. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-4",
+    "name": "Forest Stream",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-4.jpg",
+    "systemId": "3d",
+    "description": "Flat glossy epoxy floor printed with fern forest stream and mossy stones depth illusion in spa room. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-5",
+    "name": "Tropical Lagoon",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-5.jpg",
+    "systemId": "3d",
+    "description": "Flat epoxy floor with blue tropical lagoon seabed illusion and white sand in coastal villa. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "concept-nature-6",
+    "name": "Pearl Riverbed",
+    "category": "3D nature flooring",
+    "image": "assets/gallery/nature-6.jpg",
+    "systemId": "3d",
+    "description": "Flat epoxy floor depicting white river pebbles and pale aqua shallow water illusion in minimalist bathroom. A custom epoxy concept; materials, structural design and final scope are reviewed before quotation.",
+    "finish": "3D nature flooring",
+    "width": 1672,
+    "height": 941
+  }
+];
+  seed.gallery.push(...additions);
+  const featuredIds=['glitter-1','illuminated-1','floral-1','celestial-1','glitter-3','illuminated-5','floral-4','celestial-5','glitter-4','illuminated-4','floral-6','celestial-2'];
+  const featured=featuredIds.map(id=>additions.find(g=>g.id==='concept-'+id)).filter(Boolean);
+  seed.home.slideshow=[...featured.map(g=>({id:'hs-'+g.id,caption:g.name,category:g.category,image:g.image,active:true})),...seed.home.slideshow].slice(0,20);
+  seed.home.galleryEdition=1;
+})();
