@@ -1,14 +1,20 @@
-# EpoxyMitra — HTML, CSS & JavaScript
+# Epoxy Aura — HTML, CSS & JavaScript
 
 A complete browser-only website based on Epoxy_Aura.docx, extending the approved design into a premium black-and-gold light/dark experience.
 
+## Temporary training visibility
+
+All education and training code, course records, plans, batches and videos are preserved, but they are currently hidden from the public website. The Learning navigation, course plans, training schedules, Student Guide, training enquiries, training gallery item and training-related public copy do not appear. Direct visits to the hidden course/plan/batch routes return to Home.
+
+To restore the complete training website later, open `app.js` and change `const TRAINING_VISIBLE = false;` to `true`. The underlying records have not been deleted.
+
 The home page is now a full-screen cinematic showcase. Guide videos open from two compact notification cards at the bottom-left; the WhatsApp topic selector sits at the bottom-right. There is no visible slideshow countdown or progress bar. The black/red/gold background changes subtly, with additional colour accents and reduced-motion support.
 
-The approved visual design is preserved while adding an English/Hindi language selector. The selected language is stored in the browser and remains active across every client-side page; dynamically rendered views, dialogs, form labels, validation feedback, admin text and weather status are translated as they appear. The navigation remains accessible while scrolling on desktop and mobile.
+The approved visual design is preserved while adding an English/Hindi/Bengali language selector. The selected language is stored in the browser and remains active across every client-side page; dynamically rendered views, catalogue descriptions, dialogs, form labels, validation feedback, admin text and weather status are translated as they appear. This temporary translation system is built into `i18n.js`, requires no API key, billing or backend, and works without sending page text to an outside translation service. Brand names and common technical product names remain recognizable. The navigation remains accessible while scrolling on desktop and mobile.
 
 Customer Guide and Student Guide are video-first controls with a clear Play Video action. Local admin → Guide videos can upload/replace either MP4/WebM file, edit its title and description, or enable/disable it without source-code changes.
 
-The Gallery menu includes a searchable, category-filtered collection. New concepts feature glitter dining tables, illuminated resin tables, preserved flowers, stars, metallic floors, nature-inspired 3D floors and colourful furniture. These are realistic-looking AI-created concepts, not photographs of completed EpoxyMitra projects.
+The Gallery menu includes a searchable, category-filtered collection. New concepts feature glitter dining tables, illuminated resin tables, preserved flowers, stars, metallic floors, nature-inspired 3D floors and colourful furniture. These are realistic-looking AI-created concepts, not photographs of completed Epoxy Aura projects.
 
 The fixed bottom strip shows Kolkata date/time (IST) and a weather forecast integration. On local file previews, use its Forecast link; automatic weather requires a publicly hosted website. The business map appears directly below the address on Contact and in the footer. Browser Print / Save PDF now uses an English black/red/gold estimate template with calculation assumptions and clear totals.
 
@@ -16,14 +22,14 @@ The fixed bottom strip shows Kolkata date/time (IST) and a weather forecast inte
 
 1. Extract the entire ZIP.
 2. Open index.html in a current Chrome, Edge, Firefox or Safari browser.
-3. Use the header language list for English/Hindi and the moon/sun button to change the theme.
+3. Use the header language list for English, Hindi or Bengali and the moon/sun button to change the theme.
 4. Open Estimator for a customer budget, or Local admin in the footer for catalogue, rates and guide-video editing.
 
 No npm install, build, framework or database is required. Keep every file and the assets folder together. If your browser blocks local storage for file URLs, use VS Code Live Server or run `python -m http.server 8000` in this directory and open http://localhost:8000.
 
 ## Business details used
 
-- EpoxyMitra
+- Epoxy Aura
 - Art Your Own Kingdom
 - Phone / WhatsApp: +91 6202533268
 - Address: Street 917, New Town, Kolkata
@@ -62,7 +68,7 @@ The website has 16 navigable client-side pages. Hash routing keeps it working wh
 | business.css | Additional business-page, gallery, estimator and print styles |
 | showcase.css | Full-screen layout, floating guides/chat, animated background, live strip and themed PDF print styles |
 | data.js | Base course/plan/design catalogue |
-| business.js | EpoxyMitra details, active prices, gallery, consultation content and estimator systems; applied after data.js |
+| business.js | Epoxy Aura details, active prices, gallery, consultation content and estimator systems; applied after data.js |
 | gallery-data.js | Additional unique gallery concepts and featured homepage selections |
 | i18n.js | Persistent English/Hindi translation for static and dynamically rendered UI |
 | weather.js | Kolkata live clock, cached forecast request, provider attribution and offline handling |
@@ -119,7 +125,7 @@ Each monetary line is rounded to two decimals before addition. The planning rang
 | Countertop / tabletop | ₹650 | ₹300 | ₹950 | ₹7,500 |
 | River table | ₹2,200 | ₹1,000 | ₹3,200 | ₹25,000 |
 
-These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved EpoxyMitra commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
+These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved Epoxy Aura commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
 
 Base allowances include standard preparation and a standard finishing system. Extra preparation is an addition, not a second charge for standard work. Furniture area means tabletop/countertop area. Countertop resurfacing excludes new cabinetry. The river-table allowance is provisional for timber, resin, a standard base and finishing; actual slab, volume, hardware and engineering requirements can change cost substantially. Major damp/structural remediation, demolition, unusual access and specialist artwork need a separate quotation.
 

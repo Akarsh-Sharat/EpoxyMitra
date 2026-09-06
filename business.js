@@ -6,10 +6,10 @@
   const seed = window.EPOXY_SEED;
   seed.version = 3;
   seed.settings = {
-    name: 'EpoxyMitra', phone: '+91 6202533268', whatsapp: '+91 6202533268', email: '',
+    name: 'Epoxy Aura', phone: '+91 6202533268', whatsapp: '+91 6202533268', email: '',
     address: 'Street 917, New Town, Kolkata', mapQuery: 'Street 917, New Town, Kolkata',
     hours: 'Please call to arrange a visit.', instagram: '', facebook: '', youtube: '',
-    about: 'EpoxyMitra is a Kolkata-based epoxy design and learning service creating distinctive, durable and artistic resin surfaces for homeowners, commercial spaces, designers, contractors and learners.'
+    about: 'Epoxy Aura is a Kolkata-based epoxy design service creating distinctive, durable and artistic resin surfaces for homeowners, commercial spaces, designers, contractors and property owners.'
   };
   // No confirmed dates or seat counts were supplied: never fabricate scheduled classes.
   seed.batches = [];
