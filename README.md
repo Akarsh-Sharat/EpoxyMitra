@@ -1,4 +1,4 @@
-# Epoxy Aura — HTML, CSS & JavaScript
+# EpoxyMitra — HTML, CSS & JavaScript
 
 A complete browser-only website based on Epoxy_Aura.docx, extending the approved design into a premium black-and-gold light/dark experience.
 
@@ -14,7 +14,7 @@ The approved visual design is preserved while adding an English/Hindi/Bengali la
 
 Customer Guide and Student Guide are video-first controls with a clear Play Video action. Local admin → Guide videos can upload/replace either MP4/WebM file, edit its title and description, or enable/disable it without source-code changes.
 
-The Gallery menu includes a searchable, category-filtered collection. New concepts feature glitter dining tables, illuminated resin tables, preserved flowers, stars, metallic floors, nature-inspired 3D floors and colourful furniture. These are realistic-looking AI-created concepts, not photographs of completed Epoxy Aura projects.
+The Gallery menu includes a searchable, category-filtered collection. New concepts feature glitter dining tables, illuminated resin tables, preserved flowers, stars, metallic floors, nature-inspired 3D floors and colourful furniture. These are realistic-looking AI-created concepts, not photographs of completed EpoxyMitra projects.
 
 The fixed bottom strip shows Kolkata date/time (IST) and a weather forecast integration. On local file previews, use its Forecast link; automatic weather requires a publicly hosted website. The business map appears directly below the address on Contact and in the footer. Browser Print / Save PDF now uses an English black/red/gold estimate template with calculation assumptions and clear totals.
 
@@ -29,7 +29,7 @@ No npm install, build, framework or database is required. Keep every file and th
 
 ## Business details used
 
-- Epoxy Aura
+- EpoxyMitra
 - Art Your Own Kingdom
 - Phone / WhatsApp: +91 6202533268
 - Address: Street 917, New Town, Kolkata
@@ -68,7 +68,7 @@ The website has 16 navigable client-side pages. Hash routing keeps it working wh
 | business.css | Additional business-page, gallery, estimator and print styles |
 | showcase.css | Full-screen layout, floating guides/chat, animated background, live strip and themed PDF print styles |
 | data.js | Base course/plan/design catalogue |
-| business.js | Epoxy Aura details, active prices, gallery, consultation content and estimator systems; applied after data.js |
+| business.js | EpoxyMitra details, active prices, gallery, consultation content and estimator systems; applied after data.js |
 | gallery-data.js | Additional unique gallery concepts and featured homepage selections |
 | i18n.js | Persistent English/Hindi translation for static and dynamically rendered UI |
 | weather.js | Kolkata live clock, cached forecast request, provider attribution and offline handling |
@@ -125,7 +125,7 @@ Each monetary line is rounded to two decimals before addition. The planning rang
 | Countertop / tabletop | ₹650 | ₹300 | ₹950 | ₹7,500 |
 | River table | ₹2,200 | ₹1,000 | ₹3,200 | ₹25,000 |
 
-These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved Epoxy Aura commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
+These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved EpoxyMitra commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
 
 Base allowances include standard preparation and a standard finishing system. Extra preparation is an addition, not a second charge for standard work. Furniture area means tabletop/countertop area. Countertop resurfacing excludes new cabinetry. The river-table allowance is provisional for timber, resin, a standard base and finishing; actual slab, volume, hardware and engineering requirements can change cost substantially. Major damp/structural remediation, demolition, unusual access and specialist artwork need a separate quotation.
 

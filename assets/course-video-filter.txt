@@ -1,4 +1,4 @@
-drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EPOXY AURA ACADEMY':fontcolor=0xE9C45A:fontsize=68:x=(w-text_w)/2:y=150,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EpoxyMitra ACADEMY':fontcolor=0xE9C45A:fontsize=68:x=(w-text_w)/2:y=150,
 drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='HOW TO JOIN A COURSE':fontcolor=white:fontsize=42:x=(w-text_w)/2:y=250,
 drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='1  CHOOSE YOUR LEVEL':fontcolor=0xE9C45A:fontsize=56:x=(w-text_w)/2:y=430:enable='between(t,0,4.9)',
 drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='Beginner, Intermediate or Advanced':fontcolor=white:fontsize=34:x=(w-text_w)/2:y=520:enable='between(t,0,4.9)',
