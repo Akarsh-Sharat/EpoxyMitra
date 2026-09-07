@@ -466,8 +466,28 @@
   }
 ];
   seed.gallery.push(...additions);
-  const featuredIds=['glitter-1','illuminated-1','floral-1','celestial-1','glitter-3','illuminated-5','floral-4','celestial-5','glitter-4','illuminated-4','floral-6','celestial-2'];
-  const featured=featuredIds.map(id=>additions.find(g=>g.id==='concept-'+id)).filter(Boolean);
-  seed.home.slideshow=[...featured.map(g=>({id:'hs-'+g.id,caption:g.name,category:g.category,image:g.image,active:true})),...seed.home.slideshow].slice(0,20);
+  seed.home.slideshow=[
+    ['showcase-metallic-1','Obsidian Vein','Metallic Epoxy Flooring','assets/gallery/metallic-1.jpg'],
+    ['showcase-nature-1','Riverbed Glow','3D Epoxy Flooring','assets/gallery/nature-1.jpg'],
+    ['showcase-counter-1','Noir Gold Kitchen Island','Epoxy Kitchen Countertop','assets/gallery/furniture-1.jpg'],
+    ['showcase-pearl','Silver Current','Pearl Epoxy Flooring','assets/pearl-floor.png'],
+    ['showcase-flake','Graphite Flake','Flake / Chip Epoxy Flooring','assets/flake-floor.png'],
+    ['showcase-table-1','Amber River Statement','Epoxy Table Top – Plain','assets/river-table.png'],
+    ['showcase-metallic-2','Champagne Flow','Marble-effect Epoxy Flooring','assets/gallery/metallic-2.jpg'],
+    ['showcase-glitter-floor','Champagne Sparkle','Glitter Epoxy Flooring','assets/glitter-floor.png'],
+    ['showcase-coffee-1','Pearl Opal Coffee Table','Pearl / Metallic Epoxy Tabletop','assets/gallery/furniture-6.jpg'],
+    ['showcase-plain','Studio Grey','Plain / Solid Colour Epoxy','assets/solid-office.png'],
+    ['showcase-quartz','Balcony Stone Shield','Quartz Epoxy Flooring','assets/flake-floor.png'],
+    ['showcase-counter-2','Ruby Blush Island','Epoxy Kitchen Countertop','assets/gallery/furniture-3.jpg'],
+    ['showcase-nature-2','Tropical Lagoon','3D Epoxy Flooring','assets/gallery/nature-5.jpg'],
+    ['showcase-metallic-3','Emerald Tide','Metallic Epoxy Flooring','assets/gallery/metallic-4.jpg'],
+    ['showcase-light-table','Golden River Light','Illuminated Epoxy Table','assets/gallery/illuminated-1.jpg'],
+    ['showcase-pearl-2','Quiet Pearl Suite','Pearl Epoxy Flooring','assets/pearl-bedroom.png'],
+    ['showcase-nature-3','Autumn Maple','3D Epoxy Flooring','assets/gallery/nature-3.jpg'],
+    ['showcase-floral','Ivory Rose Noir','Floral Epoxy Dining Table','assets/gallery/floral-1.jpg'],
+    ['showcase-metallic-4','Sapphire Current','Metallic Epoxy Flooring','assets/gallery/metallic-5.jpg'],
+    ['showcase-plain-2','Graphite Studio','Plain / Solid Colour Epoxy','assets/solid-office.png']
+  ].map(([id,caption,category,image])=>({id,caption,category,image,active:true}));
   seed.home.galleryEdition=1;
+  seed.home.showcaseEdition=3;
 })();

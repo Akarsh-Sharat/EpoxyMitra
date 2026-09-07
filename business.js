@@ -6,7 +6,7 @@
   const seed = window.EPOXY_SEED;
   seed.version = 3;
   seed.settings = {
-    name: 'EpoxyMitra', phone: '+91 6202533268', whatsapp: '+91 6202533268', email: '',
+    name: 'EpoxyMitra', phone: '+91 6202533268', whatsapp: '+91 6202533268', email: 'info@epoxymitra.com',
     address: 'Street 917, New Town, Kolkata', mapQuery: 'Street 917, New Town, Kolkata',
     hours: 'Please call to arrange a visit.', instagram: '', facebook: '', youtube: '',
     about: 'EpoxyMitra is a Kolkata-based epoxy design service creating distinctive, durable and artistic resin surfaces for homeowners, commercial spaces, designers, contractors and property owners.'
@@ -29,27 +29,28 @@
   seed.courses.forEach((course,index) => { if ([0,2,3].includes(index)) { course.discount=[20,15,10][[0,2,3].indexOf(index)]; course.offer='Learning launch offer'; } });
   seed.plans.forEach((plan,index) => {plan.discount=index===0?20:index===2?15:0;plan.offer=plan.discount?'Complete-plan offer':'';});
   seed.estimator = {
-    waste: 5, contingency: 10, transport: 1500,
+    pricingEdition: 2, transport: 2000,
     systems: [
-      {id:'plain',name:'Plain / solid epoxy',family:'floor',material:80,labour:40,minimum:15000,image:'assets/solid-office.png',description:'A clean single-colour surface for studios, offices and practical interiors.'},
-      {id:'metallic',name:'Metallic epoxy',family:'floor',material:150,labour:65,minimum:15000,image:'assets/pearl-floor.png',description:'Flowing metallic movement and a reflective, statement finish.'},
-      {id:'pearl',name:'Pearl epoxy',family:'floor',material:170,labour:70,minimum:15000,image:'assets/pearl-bedroom.png',description:'Soft pearlescent depth for bedrooms and refined living spaces.'},
-      {id:'glitter',name:'Glitter / decorative epoxy',family:'floor',material:125,labour:55,minimum:15000,image:'assets/glitter-floor.png',description:'Fine decorative sparkle for boutiques, feature rooms and creative interiors.'},
-      {id:'3d',name:'3D / image epoxy',family:'floor',material:245,labour:85,minimum:20000,image:'assets/ocean-floor.png',description:'Image-led floor concepts with a dimensional visual effect and clear finish.'},
-      {id:'marble',name:'Marble / abstract epoxy',family:'floor',material:160,labour:65,minimum:15000,image:'assets/pearl-floor.png',description:'Expressive veining and stone-inspired movement in a custom colour palette.'},
-      {id:'flake',name:'Flake / hybrid epoxy',family:'floor',material:105,labour:45,minimum:15000,image:'assets/flake-floor.png',description:'Decorative flake texture for garages, utility spaces and commercial settings.'},
-      {id:'clear',name:'Clear protective finish',family:'floor',material:55,labour:30,minimum:12000,image:'assets/pearl-floor.png',description:'A clear finishing system over a suitable, correctly prepared existing surface.'},
-      {id:'counter',name:'Countertop / tabletop',family:'furniture',material:650,labour:300,minimum:7500,image:'assets/countertop.png',description:'Decorative resurfacing of a suitable existing countertop or tabletop; new cabinetry is not included.'},
-      {id:'river',name:'River-style resin table',family:'furniture',material:2200,labour:1000,minimum:25000,image:'assets/river-table.png',description:'A concept allowance for a resin-and-timber top with standard base/finishing; timber, resin volume and hardware determine the quote.'}
+      {id:'plain',name:'Plain / Solid Colour Epoxy',family:'floor',material:95,minRate:80,maxRate:110,rateNote:'₹80–₹110/sq.ft',image:'assets/solid-office.png',description:'Suggested customer range ₹80–₹110/sq.ft. Suitable for homes, shops and garages.'},
+      {id:'flake',name:'Flake / Chip Epoxy',family:'floor',material:135,minRate:110,maxRate:160,rateNote:'₹110–₹160/sq.ft',image:'assets/flake-floor.png',description:'Suggested customer range ₹110–₹160/sq.ft. Suitable for garages, balconies and shops.'},
+      {id:'glitter',name:'Glitter Epoxy',family:'floor',material:140,minRate:120,maxRate:160,rateNote:'₹120–₹160/sq.ft',image:'assets/glitter-floor.png',description:'Suggested customer range ₹120–₹160/sq.ft. Suitable for bedrooms and living rooms.'},
+      {id:'pearl',name:'Pearl Epoxy',family:'floor',material:160,minRate:140,maxRate:180,rateNote:'₹140–₹180/sq.ft',image:'assets/pearl-bedroom.png',description:'Suggested customer range ₹140–₹180/sq.ft. Suitable for homes and showrooms.'},
+      {id:'metallic',name:'Metallic Epoxy',family:'floor',material:195,minRate:170,maxRate:220,rateNote:'₹170–₹220/sq.ft',image:'assets/pearl-floor.png',description:'Suggested customer range ₹170–₹220/sq.ft. Suitable for luxury homes and offices.'},
+      {id:'marble',name:'Marble-effect Epoxy',family:'floor',material:215,minRate:180,maxRate:250,rateNote:'₹180–₹250/sq.ft',image:'assets/pearl-floor.png',description:'Suggested customer range ₹180–₹250/sq.ft. Suitable for homes and showrooms.'},
+      {id:'3d',name:'3D Epoxy',family:'floor',material:250,minRate:200,maxRate:300,rateNote:'₹200–₹300+/sq.ft',image:'assets/ocean-floor.png',description:'Suggested customer range ₹200–₹300+/sq.ft. Suitable for feature rooms and restaurants.'},
+      {id:'quartz',name:'Quartz Epoxy',family:'floor',material:185,minRate:150,maxRate:220,rateNote:'₹150–₹220/sq.ft',image:'assets/flake-floor.png',description:'Suggested customer range ₹150–₹220/sq.ft. Suitable for commercial and industrial spaces.'},
+      {id:'counter',name:'Epoxy Countertop',family:'furniture',material:1250,minRate:700,maxRate:2500,rateNote:'Budget ₹700–₹1,000 · Good ₹1,000–₹1,500 · Premium ₹1,500–₹2,500+/sq.ft',image:'assets/countertop.png',description:'Countertop pricing from the supplied Kolkata selling-price ranges.'},
+      {id:'table-plain',name:'Epoxy Table Top – Plain',family:'furniture',material:1500,minRate:800,maxRate:2000,rateNote:'Budget ₹800–₹1,200 · Good ₹1,200–₹1,800 · Premium ₹2,000+/sq.ft',image:'assets/river-table.png',description:'Plain epoxy tabletop pricing from the supplied Kolkata selling-price ranges.'},
+      {id:'table-pearl-metallic',name:'Pearl / Metallic Tabletop',family:'furniture',material:1850,minRate:1000,maxRate:2500,rateNote:'Budget ₹1,000–₹1,500 · Good ₹1,500–₹2,200 · Premium ₹2,500+/sq.ft',image:'assets/river-table.png',description:'Pearl or metallic tabletop pricing from the supplied Kolkata selling-price ranges.'}
     ]
   };
-  const assignedSystems=['pearl','metallic','3d','marble','glitter','plain','pearl','3d','marble','glitter','metallic','flake','river'];
+  const assignedSystems=['pearl','metallic','3d','marble','glitter','plain','pearl','3d','marble','glitter','metallic','flake','table-plain'];
   seed.designs.forEach((design,index) => {
     const system=seed.estimator.systems.find(s=>s.id===assignedSystems[index]);
     design.systemId=system.id;design.image=system.image;
-    design.price=system.material+system.labour;design.unit='per sq.ft';
+    design.price=system.material;design.unit='per sq.ft';
     design.discount=0;design.offer='';
-    design.description=`${system.description} Designed for ${design.category.toLowerCase()} projects. Colour, substrate, surface preparation and finish are agreed after a project review. The indicative rate covers the base material and labour allowance; site-specific additions are calculated separately.`;
+    design.description=`${system.description} Designed for ${design.category.toLowerCase()} projects. Colour, substrate, surface preparation and finish are agreed after a project review. The indicative rate covers the materials and design allowance; protective finish and transport are calculated separately.`;
   });
   seed.designs.push({id:'d14',name:'Graphite Vein Counter',category:'Furniture',systemId:'counter',image:'assets/countertop.png',price:950,unit:'per sq.ft',discount:0,discountStart:'',discountEnd:'',offer:'',description:'A graphite-and-white decorative countertop concept for kitchens, cafés and bars. Suitable-substrate resurfacing, edge detail and protective finishing are reviewed before quotation.'});
   const addedDesigns = [
@@ -61,7 +62,7 @@
     ['d20','Midnight Vein Countertop','Countertop','counter','assets/countertop.png'],
     ['d21','Golden Reception Flow','Commercial Space','metallic','assets/solid-office.png']
   ];
-  addedDesigns.forEach(([id,name,category,systemId,image],index)=>{const system=seed.estimator.systems.find(s=>s.id===systemId);seed.designs.push({id,name,category,systemId,image,price:system.material+system.labour,unit:system.family==='furniture'?'per sq.ft':'per sq.ft',discount:index===6?10:0,discountStart:'',discountEnd:'',offer:index===6?'Commercial design offer':'',description:`${system.description} A premium ${category.toLowerCase()} concept with colour, preparation and final scope confirmed after a project review.`});});
+  addedDesigns.forEach(([id,name,category,systemId,image],index)=>{const mappedId=systemId==='river'?'table-plain':systemId;const system=seed.estimator.systems.find(s=>s.id===mappedId);seed.designs.push({id,name,category,systemId:mappedId,image,price:system.material,unit:'per sq.ft',discount:index===6?10:0,discountStart:'',discountEnd:'',offer:index===6?'Commercial design offer':'',description:`${system.description} A premium ${category.toLowerCase()} concept with colour, preparation and final scope confirmed after a project review.`});});
   seed.categories.designs = ['1 BHK','2 BHK','3 BHK','Flat','Apartment','Office','Bedroom','Living Room','Kitchen','Bathroom','Dining Room','Balcony','Staircase','Flooring','Furniture','Table','Countertop','Commercial Space','Complete Home','Custom Design'];
   seed.gallery = [
     {id:'g1',name:'Silver Current',category:'Metallic floors',image:'assets/pearl-floor.png',systemId:'metallic',description:'Pearl-white and graphite metallic movement across a contemporary living-room floor.',finish:'Reflective metallic'},

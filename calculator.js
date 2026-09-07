@@ -20,25 +20,16 @@ window.EpoxyCalculator = (() => {
     if(!system)throw new Error('Select an epoxy system.');
     const area=areaSqft(input.rooms,input.unit);
     const materialRate=number(system.material,0,100000,'Material rate');
-    const labourRate=number(system.labour,0,100000,'Labour rate');
-    const minimum=number(system.minimum,0,10000000,'Minimum project allowance');
-    const complexity=number(input.complexity,1,1.5,'Design multiplier');
-    const waste=number(input.waste,0,30,'Material allowance');
-    const contingency=number(input.contingency,0,30,'Contingency');
-    const transport=number(input.transport,0,1000000,'Transport');
-    const taxPercent=number(input.tax,0,30,'Tax allowance');
-    const prepRate=number(input.prep,0,1000,'Preparation rate');
+    const transport=number(input.transport,2000,1000000,'Transport / mobilisation');
     const finishRate=number(input.finish,0,500,'Finish upgrade rate');
-    const materials=round(area*materialRate*complexity*(1+waste/100));
-    const labour=round(area*labourRate),prep=round(area*prepRate),finish=round(area*finishRate);
-    const base=round(materials+labour+prep+finish);
-    const minimumAdjustment=round(Math.max(0,minimum-base));
-    const subtotal=round(base+minimumAdjustment+transport);
-    const tax=round(subtotal*taxPercent/100);
-    const buffer=round(subtotal*contingency/100);
-    const total=round(subtotal+tax+buffer);
-    return {area,materials,labour,prep,finish,base,minimumAdjustment,transport,subtotal,tax,buffer,total,low:round(total*0.85),high:round(total*1.15),effectiveRate:round(total/area),lines:[
-      ['Materials + design allowance',materials],['Application labour',labour],['Additional surface preparation',prep],['Protective finish upgrade',finish],['Minimum project adjustment',minimumAdjustment],['Transport / mobilisation',transport],['Tax allowance',tax],['Contingency reserve',buffer]
+    const minRate=number(system.minRate??materialRate,0,100000,'Minimum rate');
+    const maxRate=number(system.maxRate??materialRate,0,100000,'Maximum rate');
+    if(maxRate<minRate)throw new Error('Maximum rate must be greater than or equal to minimum rate.');
+    const materials=round(area*materialRate),finish=round(area*finishRate);
+    const total=round(materials+finish+transport);
+    const low=round(area*minRate+finish+transport),high=round(area*maxRate+finish+transport);
+    return {area,materials,finish,transport,total,low,high,effectiveRate:round(total/area),lines:[
+      ['Materials + design allowance',materials],['Protective finish upgrade',finish],['Transport / mobilisation',transport]
     ]};
   }
   return {estimate,areaSqft,round};

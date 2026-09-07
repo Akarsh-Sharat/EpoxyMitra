@@ -1,6 +1,6 @@
 # EpoxyMitra — HTML, CSS & JavaScript
 
-A complete browser-only website based on Epoxy_Aura.docx, extending the approved design into a premium black-and-gold light/dark experience.
+A complete browser-only EpoxyMitra website with the approved premium black-and-gold light/dark experience.
 
 ## Temporary training visibility
 
@@ -30,7 +30,7 @@ No npm install, build, framework or database is required. Keep every file and th
 ## Business details used
 
 - EpoxyMitra
-- Art Your Own Kingdom
+- Your Trusted Epoxy Partner
 - Phone / WhatsApp: +91 6202533268
 - Address: Street 917, New Town, Kolkata
 
@@ -125,7 +125,7 @@ Each monetary line is rounded to two decimals before addition. The planning rang
 | Countertop / tabletop | ₹650 | ₹300 | ₹950 | ₹7,500 |
 | River table | ₹2,200 | ₹1,000 | ₹3,200 | ₹25,000 |
 
-These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved EpoxyMitra commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
+These rates were chosen for budgeting as requested; they are NOT researched market quotations, approved Epoxy Aura commercial rates or product technical specifications. Confirm them before business use. The default 500 sq.ft metallic example totals ₹1,24,025 with 5% material allowance, ₹1,500 transport, 10% contingency, no extra prep/upgrade and no tax allowance.
 
 Base allowances include standard preparation and a standard finishing system. Extra preparation is an addition, not a second charge for standard work. Furniture area means tabletop/countertop area. Countertop resurfacing excludes new cabinetry. The river-table allowance is provisional for timber, resin, a standard base and finishing; actual slab, volume, hardware and engineering requirements can change cost substantially. Major damp/structural remediation, demolition, unusual access and specialist artwork need a separate quotation.
 
