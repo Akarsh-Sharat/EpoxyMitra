@@ -6,11 +6,21 @@
   const seed = window.EPOXY_SEED;
   seed.version = 3;
   seed.settings = {
-    name: 'EpoxyMitra', phone: '+91 6202533268', whatsapp: '+91 6202533268', email: 'info@epoxymitra.com',
-    address: 'Street 917, New Town, Kolkata', mapQuery: 'Street 917, New Town, Kolkata',
-    hours: 'Please call to arrange a visit.', instagram: '', facebook: '', youtube: '',
-    about: 'EpoxyMitra is a Kolkata-based epoxy design service creating distinctive, durable and artistic resin surfaces for homeowners, commercial spaces, designers, contractors and property owners.'
-  };
+  name: 'EpoxyMitra',
+  phone: '+91 6290490950 / +91 6202533268',
+  whatsapp: '+91 6202533268',
+  email: 'info@epoxymitra.com',
+
+  address: 'Shop No 1, Street Number 844, Plot No 1278, Newtown AAIIIC, Kolkata 700160',
+  mapQuery: 'Shop No 1, Street Number 844, Plot No 1278, Newtown AAIIIC, Kolkata 700160',
+
+  hours: 'Please call to arrange a visit.',
+  instagram: '',
+  facebook: '',
+  youtube: '',
+
+  about: 'EpoxyMitra is a Kolkata-based epoxy design service creating distinctive, durable and artistic resin surfaces for homeowners, commercial spaces, designers, contractors and property owners.'
+};
   // No confirmed dates or seat counts were supplied: never fabricate scheduled classes.
   seed.batches = [];
   const courseImages = ['solid-office.png','pearl-floor.png','ocean-floor.png','ocean-floor.png','pearl-floor.png','pearl-bedroom.png','pearl-floor.png','countertop.png','glitter-floor.png','flake-floor.png','river-table.png','workshop.png'];
