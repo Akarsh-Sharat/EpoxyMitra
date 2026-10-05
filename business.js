@@ -8,7 +8,7 @@
   seed.settings = {
   name: 'EpoxyMitra',
   phone: '+91 6290490950 / +91 6202533268',
-  whatsapp: '+91 6202533268',
+  whatsapp: '+91 6290490950',
   email: 'info@epoxymitra.com',
 
   address: 'Shop No 1, Street Number 844, Plot No 1278, Newtown AAIIIC, Kolkata 700160',
